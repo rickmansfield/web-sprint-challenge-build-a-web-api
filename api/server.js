@@ -18,11 +18,11 @@ server.use("*", (req,res)=>{
 })
 
 
-// server.use((err, req, res, next) => { // eslint-disable-line
-//     res.status(500).json({
-//         message: err.message,
-//         stack: err.stack,
-//     })
-// })
+server.use((err, req, res, next) => { // eslint-disable-line
+    res.status(500).json({
+        message: err.message,
+        stack: err.stack,
+    })
+})
 
 module.exports = server;

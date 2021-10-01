@@ -15,4 +15,15 @@ function validateProjectId(req, res, next) {
     })
 }
 
-module.exports = {validateProjectId}
+function validatePost(req, res, next) {
+    const { name, description, completed } = req.body
+    if (!name || !description || !name.trim() || completed == null) {
+        res.status(400).json({
+            message: 'Missing required name or description field'
+        })
+    } else {
+        next()
+    }
+}
+
+module.exports = {validateProjectId, validatePost}
