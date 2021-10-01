@@ -6,4 +6,16 @@ const {
     validateActionsId
 } = require('./actions-middlware')
 
+router.get('/', (req, res, next) => {
+    Actions.get(req.params.id)
+    .then(project => {
+        res.status(200).json(project)
+    })
+    .catch(next)
+})
+
+router.get('/:id', validateActionsId, (req, res ) =>{
+    res.status(200).json(req.action)
+})
+
 module.exports = router
