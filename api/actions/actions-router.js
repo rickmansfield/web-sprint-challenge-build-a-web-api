@@ -16,7 +16,7 @@ router.get('/', (req, res, next) => {
 })
 
 router.get('/:id', validateActionsId, (req, res ) =>{
-    res.json(req.action)
+    res.json(req.actions)
 })
 
 router.post('/', validateActions, (req, res, next) =>{
