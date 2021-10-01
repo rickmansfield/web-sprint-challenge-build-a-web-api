@@ -1,4 +1,5 @@
 const Actions = require ('./actions-model')
+
 function validateActionsId(req, res, next) {
     const { id } = req.params
     Actions.get(id)
@@ -34,6 +35,5 @@ function validateActions(req, res, next) {
         next()
     }
 }
-
 
 module.exports = { validateActionsId, validateActions }
