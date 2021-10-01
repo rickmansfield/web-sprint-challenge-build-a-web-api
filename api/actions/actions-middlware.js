@@ -14,5 +14,26 @@ function validateActionsId(req, res, next) {
     })
 }
 
+function validateActions(req, res, next) {
+    const { 
+        project_id, 
+        description, 
+        notes, 
+        completed
+    } = req.body
+    if (
+        !project_id == undefined || 
+        !description || 
+        !notes ||
+        !completed == undefined
+    ) {
+        res.status(400).json({
+            message: `missing Project_id, description, notes, or 'completed' field`
+        })
+    } else {
+        next()
+    }
+}
 
-module.exports = { validateActionsId }
+
+module.exports = { validateActionsId, validateActions }

@@ -3,7 +3,8 @@ const express = require('express')
 const router = express.Router()
 const Actions = require('./actions-model')
 const {
-    validateActionsId
+    validateActionsId,
+    validateActions
 } = require('./actions-middlware')
 
 router.get('/', (req, res, next) => {
@@ -15,7 +16,11 @@ router.get('/', (req, res, next) => {
 })
 
 router.get('/:id', validateActionsId, (req, res ) =>{
-    res.status(200).json(req.action)
+    res.json(req.action)
+})
+
+router.post('/', validateActions, (req, res, next) =>{
+
 })
 
 module.exports = router
