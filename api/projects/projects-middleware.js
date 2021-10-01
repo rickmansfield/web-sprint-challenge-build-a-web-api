@@ -27,10 +27,10 @@ function validateProject(req, res, next) {
 }
 
 function validateProjectComplete(req, res, next) {
-    const { name, description } = req.body
-    if (!name || !description || !name.trim()) {
+    const { name, description, completed } = req.body
+    if (!name || !description || !name.trim() || completed == undefined) {
         res.status(400).json({
-            message: 'Missing required name or description field'
+            message: `Missing required name, description or 'completed' field`
         })
     } else {
         next()

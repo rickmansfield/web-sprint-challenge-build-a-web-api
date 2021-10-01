@@ -38,5 +38,6 @@ router.put('/:id', validateProjectId, validateProjectComplete, (req, res, next) 
     .catch(next)
 })
 
+router.delete('/:id', validateProjectId, )
 
 module.exports = router
