@@ -26,5 +26,13 @@ module.exports = {
     connection: {
       filename: './data/test.db3',
     },
-  }
+  },
+  production: {
+		client: "sqlite3",
+		connection: { filename: "./data/lambda.db3" },
+		migrations: {
+			directory: "./data/migrations/",
+		},
+		useNullAsDefault: true,
+	},
 }
