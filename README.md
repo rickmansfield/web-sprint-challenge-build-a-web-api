@@ -1,5 +1,22 @@
 # Sprint Challenge Instructions
 
+- [Sprint Challenge Instructions](#sprint-challenge-instructions)
+  - [Introduction](#introduction)
+  - [Instructions](#instructions)
+    - [Task 1: Project Set Up](#task-1-project-set-up)
+    - [Task 2: Project Requirements (MVP)](#task-2-project-requirements-mvp)
+      - [NPM Scripts](#npm-scripts)
+      - [Environment Variables](#environment-variables)
+      - [Endpoints](#endpoints)
+      - [Middleware functions](#middleware-functions)
+    - [Database Schemas](#database-schemas)
+      - [Projects](#projects)
+      - [Actions](#actions)
+    - [Database Persistence Helpers](#database-persistence-helpers)
+  - [Submission format](#submission-format)
+  - [Interview Questions](#interview-questions)
+  - [Heroku Deployment](#heroku-deployment)
+
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
 This challenge allows you to practice the concepts and techniques learned over the past sprint and apply them in a concrete project. This sprint explored **how to build web services based on the REST (REpresentational State Transfer) architectural style**. During this sprint, you studied **Node.js and Express, server side routing, how to write Express middleware and how to deploy an API to Heroku**.
@@ -154,3 +171,6 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 3. The basic principles of the REST architectural style.
 4. Understand and explain the use of Express Routers.
 5. Describe tooling used to manually test the correctness of an API.
+
+## Heroku Deployment
+[Heroku Link](https://projects-actions.herokuapp.com/)
